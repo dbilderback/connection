@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb://portfolioUser:2001Cr250@localhost:27017/portfoliodb",
-  "jwtSecret": "alittleSecrets"
-}
