@@ -16,7 +16,8 @@
     "redux-thunk": "^2.3.0",
     "ts-pnp": "^1.1.4",
     "tsutils": "^3.17.1",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
