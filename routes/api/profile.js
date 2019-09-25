@@ -78,7 +78,6 @@ router.post(
     if (skills) {
       profileFields.skills = skills.split(",").map(skill => skill.trim());
     }
-    console.log(profileFields.skills);
     profileFields.social = {};
     if (youtube) profileFields.social.youtube = youtube;
     if (twitter) profileFields.social.twitter = twitter;
