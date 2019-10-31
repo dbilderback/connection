@@ -17,7 +17,7 @@ const CreateProfile = ({ createProfile, history }) => {
     facebook: "",
     linkedin: "",
     youtube: "",
-    instagram: ""
+    instagram: "",
   });
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
@@ -34,7 +34,7 @@ const CreateProfile = ({ createProfile, history }) => {
     facebook,
     linkedin,
     youtube,
-    instagram
+    instagram,
   } = formData;
 
   const onChange = e =>
@@ -49,8 +49,8 @@ const CreateProfile = ({ createProfile, history }) => {
     <Fragment>
       <h1 className="large text-primary">Create Your Profile</h1>
       <p className="lead">
-        <i className="fas fa-user"></i> Let's get some information to make your
-        profile stand out
+        <i className="fas fa-user"></i>
+        Let's get some information to make your profile stand out
       </p>
       <small>* = required field</small>
       <form className="form" onSubmit={e => onSubmit(e)}>
@@ -145,9 +145,10 @@ const CreateProfile = ({ createProfile, history }) => {
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-primary"
           >
-            Add Social Network Links
+            Add Social Network Links{" "}
+            <i className="fas fa-angle-double-down"></i>
           </button>
           <span>Optional</span>
         </div>
@@ -212,7 +213,7 @@ const CreateProfile = ({ createProfile, history }) => {
         )}
 
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <Link className="btn btn-primary my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
@@ -221,7 +222,7 @@ const CreateProfile = ({ createProfile, history }) => {
 };
 
 CreateProfile.propTypes = {
-  createProfile: PropTypes.func.isRequired
+  createProfile: PropTypes.func.isRequired,
 };
 
 export default connect(

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getPosts } from "../../actions/post";
 import Spinner from "../layout/Spinner";
 import PostItem from "./PostItem";
+import PostForm from "./PostForm";
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
@@ -11,33 +12,36 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
   }, [getPosts]);
   return (
     <Fragment>
+      {" "}
       {loading ? (
         <Spinner />
       ) : (
         <Fragment>
           <p className="lead">
-            <i className="fas fa-user"></i> Welcome to the Community
-          </p>
+            <i className="fas fa-user"> </i> Welcome to the Community{" "}
+          </p>{" "}
+          <PostForm />
           <div className="posts">
+            {" "}
             {posts.length > 0 ? (
               posts.map(post => <PostItem key={post._id} post={post} />)
             ) : (
-              <h4>No posts to Display</h4>
-            )}
-          </div>
+              <h4> No posts to Display </h4>
+            )}{" "}
+          </div>{" "}
         </Fragment>
-      )}
+      )}{" "}
     </Fragment>
   );
 };
 
 Posts.propTypes = {
   getPosts: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  post: state.post
+  post: state.post,
 });
 
 export default connect(

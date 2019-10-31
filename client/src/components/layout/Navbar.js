@@ -8,10 +8,17 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to="/profiles">Developer Profiles</Link>
+        <Link id="oppositeHover" to="/profiles">
+          Developer Profiles
+        </Link>
       </li>
       <li>
-        <Link to="/dashboard">
+        <Link id="oppositeHover" to="/posts">
+          Bulletin Board
+        </Link>
+      </li>
+      <li>
+        <Link id="oppositeHover" to="/dashboard">
           <i className="fas fa-user"></i>{" "}
           <span className="hide-sm">Dashboard</span>
         </Link>
@@ -19,7 +26,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <a onClick={logout} href="#!">
           <i className="fas fa-sign-out-alt"></i>{" "}
-          <span className="hide-sm">Logout</span>
+          <span className="hide-sm" id="oppositeHover">
+            Logout
+          </span>
         </a>
       </li>
     </ul>
@@ -41,11 +50,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav className="navbar bg-dark">
+    <nav className="navbar bg-primary">
       <h1>
-        <a href="index.html">
+        <Link to="/">
           <i className="fab fa-connectdevelop"></i> Connection
-        </a>
+        </Link>
       </h1>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
@@ -56,11 +65,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
 });
 
 export default connect(

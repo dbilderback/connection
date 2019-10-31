@@ -12,7 +12,7 @@ const AddEducation = ({ addEducation, history }) => {
     from: "",
     to: "",
     current: false,
-    description: ""
+    description: "",
   });
 
   const [toDateDisabled, toggleDisabled] = useState(false);
@@ -24,7 +24,7 @@ const AddEducation = ({ addEducation, history }) => {
     from,
     to,
     current,
-    description
+    description,
   } = formData;
 
   const onChange = e =>
@@ -121,7 +121,7 @@ const AddEducation = ({ addEducation, history }) => {
           ></textarea>
         </div>
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <Link className="btn btn-primary my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
@@ -130,7 +130,7 @@ const AddEducation = ({ addEducation, history }) => {
 };
 
 AddEducation.propTypes = {
-  addEducation: PropTypes.func.isRequired
+  addEducation: PropTypes.func.isRequired,
 };
 
 export default connect(

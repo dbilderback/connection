@@ -50,11 +50,11 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
 ProfileGithub.propTypes = {
   getGithubRepos: PropTypes.func.isRequired,
   repos: PropTypes.array.isRequired,
-  username: PropTypes.string.isRequired
+  username: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({
-  repos: state.profile.repos
+  repos: state.profile.repos,
 });
 
 export default connect(

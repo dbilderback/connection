@@ -8,7 +8,7 @@ const EditProfile = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
-  history
+  history,
 }) => {
   const [formData, setFormData] = useState({
     company: "",
@@ -22,7 +22,7 @@ const EditProfile = ({
     facebook: "",
     linkedin: "",
     youtube: "",
-    instagram: ""
+    instagram: "",
   });
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
@@ -43,7 +43,7 @@ const EditProfile = ({
       facebook: loading || !profile.social ? "" : profile.social.facebook,
       linkedin: loading || !profile.social ? "" : profile.social.linkedin,
       youtube: loading || !profile.social ? "" : profile.social.youtube,
-      instagram: loading || !profile.social ? "" : profile.social.instagram
+      instagram: loading || !profile.social ? "" : profile.social.instagram,
     });
   }, [loading, getCurrentProfile, setFormData]);
 
@@ -59,7 +59,7 @@ const EditProfile = ({
     facebook,
     linkedin,
     youtube,
-    instagram
+    instagram,
   } = formData;
 
   const onChange = e =>
@@ -170,9 +170,10 @@ const EditProfile = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-primary"
           >
-            Add Social Network Links
+            Add Social Network Links{" "}
+            <i className="fas fa-angle-double-down"></i>
           </button>
           <span>Optional</span>
         </div>
@@ -237,7 +238,7 @@ const EditProfile = ({
         )}
 
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <Link className="btn btn-primary my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
@@ -248,11 +249,11 @@ const EditProfile = ({
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile
+  profile: state.profile,
 });
 
 export default connect(

@@ -14,7 +14,7 @@ const Profile = ({
   getProfileById,
   profile: { profile, loading },
   auth,
-  match
+  match,
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
@@ -25,13 +25,13 @@ const Profile = ({
         <Spinner />
       ) : (
         <Fragment>
-          <Link to="/profiles" className="btn gtn-light">
+          <Link to="/profiles" className="btn btn-primary">
             Back To Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
             auth.user._id === profile.user._id && (
-              <Link to="/edit-profile" className="btn btn-dark">
+              <Link to="/edit-profile" className="btn btn-primary">
                 Edit Profile
               </Link>
             )}
@@ -81,12 +81,12 @@ const Profile = ({
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
   profile: state.profile,
-  auth: state.auth
+  auth: state.auth,
 });
 
 export default connect(
