@@ -1,0 +1,62 @@
+
+
+Tue Nov  5 17:41:57 2019
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 5.3.6-050306-generic (#201910111731 SMP Fri Oct 11 17:34:45 UTC 2019) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 8166 MB / 7788 MiB - CHS 1020 252 62, sector size=512 - PNY USB 2.0 FD, FW:1100
+
+Partition table type (auto): Intel
+Disk /dev/sda - 8166 MB / 7788 MiB - PNY USB 2.0 FD
+Partition table type: Intel
+
+Interface Advanced
+Geometry from i386 MBR: head=255 sector=63
+BAD_RS LBA=2048 2016
+FAT32 at 0/33/3
+Info: size boot_sector 15948544, partition 15948544
+FAT1 : 1682-17224
+FAT2 : 17225-32767
+start_rootdir : 32768 root cluster : 2
+Data : 32768-15948543
+sectors : 15948544
+cluster_size : 8
+no_of_cluster : 1989472 (2 - 1989473)
+fat_length 15543 calculated 15543
+heads/cylinder 255 (FAT) != 252 (HD)
+sect/track 63 (FAT) != 62 (HD)
+ 1 * FAT32 LBA                0  33  3  1020 227 38   15948544 [UBUNTU 18_0]
+     FAT32, blocksize=4096, 8165 MB / 7787 MiB
+
+FAT: cluster=2(0x2), pos=34816
+Directory /
+       3 -r-xr-xr-x     0      0     69623  7-Oct-2019 18:58 LDLINUX.SYS
+      20 drwxr-xr-x     0      0         0  7-Oct-2019 18:58 .disk
+      25 drwxr-xr-x     0      0         0  7-Oct-2019 18:58 BOOT
+    1284 drwxr-xr-x     0      0         0  7-Oct-2019 18:58 CASPER
+  498994 drwxr-xr-x     0      0         0  7-Oct-2019 19:05 DISTS
+  499018 drwxr-xr-x     0      0         0  7-Oct-2019 19:05 EFI
+  499626 drwxr-xr-x     0      0         0  7-Oct-2019 19:05 INSTALL
+  499672 drwxr-xr-x     0      0         0  7-Oct-2019 19:05 ISOLINUX
+  500468 -rwxr-xr-x     0      0     23882  7-Oct-2019 19:05 MD5SUM.TXT
+  500474 drwxr-xr-x     0      0         0  7-Oct-2019 19:05 PICS
+  500487 drwxr-xr-x     0      0         0  7-Oct-2019 19:05 POOL
+  508212 drwxr-xr-x     0      0         0  7-Oct-2019 19:06 PRESEED
+  508216 -rwxr-xr-x     0      0       233  7-Oct-2019 19:06 README.diskdefines
+       0 -rwxr-xr-x     0      0         0  7-Oct-2019 19:06 UBUNTU
+  508217 -rwxr-xr-x     0      0        94  7-Oct-2019 19:06 SYSLINUX.CFG
+  508218 -rwxr-xr-x     0      0       234  7-Oct-2019 19:06 AUTORUN.INF
+  508219 -rwxr-xr-x     0      0     34494  7-Oct-2019 19:06 AUTORUN.ICO
+  508228 -rwxr-xr-x     0      0 3680307200  8-Oct-2019 01:33 SW_DVD9_Win_Pro_10_1903.1_32BIT_English_Pro_Ent_EDU_N_MLF_X22-13988.ISO
+ 1406741 drwxr-xr-x     0      0         0  7-Oct-2019 21:06 System Volume Information
+ 1406745 -rwxr-xr-x     0      0 162975744 21-Oct-2019 09:44 .HPIMAGE.VFS
+X   4742 drwxr-xr-x     0      0      4096 21-Oct-2019 09:44 _PSCANS
+
+TestDisk exited normally.
