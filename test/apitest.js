@@ -1,6 +1,6 @@
 const supertest = require("supertest");
 
-var server = supertest.agent("http://localhost:5000");
+const server = supertest.agent("http://localhost:5000");
 
 describe("### GET /api/profile", function() {
   it("should return a list of profiles", function(done) {
