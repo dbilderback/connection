@@ -5,6 +5,9 @@ const app = express();
 
 //Connect DB
 connectDB();
+if (process.env.NODE_ENV === "test") {
+  connectDB.unref();
+}
 
 // Init Middleware
 app.use(
@@ -24,5 +27,8 @@ app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/auth", require("./routes/api/auth"));
 
 const PORT = process.env.PORT || 5000;
+if (require.main === module) {
+  app.listen(PORT, () => console.log("Server Started"));
+}
 
-app.listen(PORT, () => console.log("Server started on port ${PORT}"));
+exports = module.exports = app;

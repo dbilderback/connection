@@ -10,7 +10,8 @@
         "start": "./node_modules/.bin/concurrently \"npm run server\" \"npm run client\"",
         "server": "nodemon server --delay 25000ms",
         "client": "npm start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "test": "mocha 'test/*.js'"
     },
     "babel": {
         "presets": [
@@ -32,7 +33,7 @@
         "mem": "^5.1.1",
         "mongoose": "^5.7.7",
         "request": "^2.88.0",
-        "webpack": "^4.40.2"
+        "webpack": "4.40.2"
     },
     "devDependencies": {
         "@babel/core": "^7.6.4",
@@ -44,7 +45,11 @@
         "concurrently": "^4.1.2",
         "css-loader": "^3.2.0",
         "file-loader": "^4.2.0",
+        "mocha": "^6.2.2",
         "nodemon": "^1.19.4",
+        "should": "^13.2.3",
+        "supertest": "^4.0.2",
+        "tape": "^4.11.0",
         "webpack-cli": "^3.3.10"
     }
 }
