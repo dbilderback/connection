@@ -1,0 +1,5 @@
+import React, { useState, useEffect, Fragment } from 'react'
+import { Link, withRouter } from 'react-dom'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { addTechnicalSkills } from '../../actions/profile'
