@@ -1,30 +1,32 @@
-import React from 'react'
-import propTypes from 'prop-types'
+import React from "react";
+import propTypes from "prop-types";
 
-function Slider (props) {
-  const className = `input ${props.type}`
+function Slider(props) {
+  const className = `input ${props.type}`;
   return (
     <div>
-      <span style={{ fontSize: '16px', marginBottom: '6px' }} />
+      <span style={{ fontSize: "16px", marginBottom: "6px" }} />
       <input
-        type='range'
+        type="range"
         value={props.value}
+        defaultValue={props.defaultValue}
         min={props.min}
         max={props.max}
         className={className}
-        step='1'
+        step="1"
         readOnly
       />
     </div>
-  )
+  );
 }
 
 Slider.propTypes = {
   type: propTypes.string.isRequired,
-  value: propTypes.number.isRequired,
+  value: propTypes.number,
+  defaultValue: propTypes.number,
   min: propTypes.number.isRequired,
   max: propTypes.number.isRequired,
-  className: propTypes.string.isRequired
-}
+  className: propTypes.string.isRequired,
+};
 
-export default Slider
+export default Slider;

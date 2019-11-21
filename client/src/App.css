@@ -66,9 +66,9 @@ input[type="range"]::-webkit-slider-runnable-track {
     /* Old browsers */
     background: -moz-linear-gradient(left, var(--primary-color) 0%, 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -webkit-linear-gradient( left, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient( to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
     /* IE6-9 */
@@ -93,9 +93,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     /* Old browsers */
     background: -moz-linear-gradient(left, var(--primary-color) 0%, 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -webkit-linear-gradient( left, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient( to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
     /* IE6-9 */
@@ -112,9 +112,9 @@ input[type="range"]::-moz-range-track {
     /* Old browsers */
     background: -moz-linear-gradient(left, var(--primary-color) 0%, 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -webkit-linear-gradient( left, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient( to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
     /* IE6-9 */
@@ -148,9 +148,9 @@ input[type="range"]::-ms-fill-lower {
     /* Old browsers */
     background: -moz-linear-gradient(left, var(--primary-color) 0%, 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -webkit-linear-gradient( left, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient( to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
     /* IE6-9 */
@@ -181,9 +181,9 @@ input[type="range"]:focus::-ms-fill-lower {
     /* Old browsers */
     background: -moz-linear-gradient(left, var(--primary-color) 0%, 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -webkit-linear-gradient( left, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient( to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
     /* IE6-9 */
@@ -192,6 +192,27 @@ input[type="range"]:focus::-ms-fill-lower {
 
 input[type="range"]:focus::-ms-fill-upper {
     background: #367ebd;
+}
+
+.loading {
+    font-size: 10vw;
+}
+
+.linear-wipe {
+    text-align: center;
+    background: linear-gradient( to right, #6e3667 20%, #88d317 40%, #88d317 60%, #6e3667 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 1s linear infinite;
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
 }
 
 
@@ -350,9 +371,9 @@ input[type="range"]:focus::-ms-fill-upper {
     /* Old browsers */
     background: -moz-linear-gradient(left, var(--primary-color) 0%, 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -webkit-linear-gradient( left, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient( to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
     /* IE6-9 */
@@ -491,6 +512,37 @@ button {
     color: #0077b5;
 }
 
+span.table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+span.thead {
+    display: table-header-group;
+    color: white;
+    font-weight: bold;
+    background-color: grey;
+}
+
+span.tbody {
+    display: table-row-group;
+}
+
+span.tr {
+    display: table-row;
+}
+
+span.td {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 1px;
+}
+
+span.tr.editing .td input {
+    width: 100px;
+}
+
 .table th,
 .table td {
     padding: 0rem 1rem 0rem 1rem;
@@ -583,7 +635,7 @@ table.center {
 
 .profile-grid {
     display: grid;
-    grid-template-areas: "top top""about about""exp edu""github github";
+    grid-template-areas: "top top" "about about" "exp edu" "github github";
     grid-gap: 1rem;
 }
 
@@ -756,7 +808,7 @@ table.center {
         margin: auto;
     }
     .profile-grid {
-        grid-template-areas: "top""about""exp""edu""github";
+        grid-template-areas: "top" "about" "exp" "edu" "github";
     }
     .profile-about .skills {
         flex-direction: column;

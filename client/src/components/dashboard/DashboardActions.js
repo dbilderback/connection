@@ -1,24 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const DashboardActions = () => {
   return (
-    <div className='dash-buttons'>
-      <Link to='/edit-profile' className='btn btn-light'>
-        <i className='fas fa-user-circle text-primary' /> Edit Profile
+    <div className="dash-buttons">
+      <Link to="/edit-profile" className="btn btn-light">
+        <i className="fas fa-user-circle text-primary" /> Edit Profile
       </Link>
-      <Link to='/add-experience' className='btn btn-light'>
-        <i className='fab fa-black-tie text-primary' /> Add Experience
+      <Link to="/add-experience" className="btn btn-light">
+        <i className="fab fa-black-tie text-primary" /> Add Experience
       </Link>
-      <Link to='/add-education' className='btn btn-light'>
-        <i className='fas fa-graduation-cap text-primary' /> Add Education
+      <Link to="/add-education" className="btn btn-light">
+        <i className="fas fa-graduation-cap text-primary" /> Add Education
       </Link>
-      <Link to='/add-edit-skills' className='btn btn-light'>
-        <i className='fas fa-graduation-cap text-primary' /> Add Technical
+      <Link to="/technical-skills" className="btn btn-light">
+        <i className="fas fa-graduation-cap text-primary" /> Add Technical
         Skills
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardActions
+export default DashboardActions;
